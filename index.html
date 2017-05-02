@@ -2,44 +2,35 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<script src="script.js"></script>-->
+<script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body bgcolor="yellow">
+    <!--PAGE ONE-->
 <div data-role="page" id="pageone">
   <div id="header" data-role="header">
     <img src="logo.png">
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Welcome to NUGT23 A tour guide and encyclopedia in your pocket! 
+    <p>Welcome to NUGT! A tour guide and encyclopedia in your pocket! 
     <br>
     <br>
     Please turn on location services to get started.</p>
       <button onclick="getLocation()">Get Location</button>
-  </div>
-
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
+      <br>
+      <div id="pictures"><p>If you already know where you want to go, press the image below for directions!</p></div>
   </div>
 </div>
-
-<div data-role="page" id="settings">
-  <div data-role="header">
-    <h1>Settings</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
+    <!--END OF PAGE ONE-->
+<!--PAGE TWO-->
+  <div data-role="page" id="pagetwo">
     <p>This is Page Two. If you click on the link below, it will take you to Page three.</p>
     <a href="#pagethree">Go to Page One</a>
   </div>
-
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
-  </div>
-</div>
-    
-      <div data-role="page" id="pagethree">
+    <!--END OF PAGE TWO-->
+    <!--PAGE THREE-->  
+    <div data-role="page" id="pagethree">
   <div data-role="header">
     <h1>Welcome To page three</h1>
   </div>
@@ -48,12 +39,13 @@
     <p>This is Page Three. If you click on the link below, it will take you to Page One.</p>
     <a href="#pageone">Go to Page One</a>
   </div>
-
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
+    </div>
+    <!--END OF PAGE THREE-->
+<!--FOOTER-->
+  <div data-role="footer" data-position="fixed" id="footer">
+    <h4>Worcester's pocket sized tour guide!</h4>
   </div>
-</div>
-
+<!--END OF FOOTER-->
 </body>
 </html>
 

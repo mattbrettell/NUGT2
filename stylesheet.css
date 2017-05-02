@@ -2,11 +2,21 @@
     text-align:center;
 }
 
-/*button {
-    background-color:green;
-    color:white;
-    padding:5%;
-    font-size:2em;
-    text-decoration:none;
-    border:2px solid white;
-}*/
+p { 
+text-align:center;
+    font-size:1em;
+    color:navy;
+    font-family:Helvetica;
+}
+
+button {
+    text-align:center;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 644px;
+    height: 20px;
+    margin: 0 auto;
+}
