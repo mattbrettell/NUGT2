@@ -20,7 +20,7 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION=Determining nearest landmarks" />
+    <plugin name="cordova-plugin-geolocation" />
 
 
 <platform name="ios" >
