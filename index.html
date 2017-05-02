@@ -2,13 +2,23 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 <script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body bgcolor="yellow">
+    <script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Location could not be found.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
 
 <div data-role="page" id="pageone">
   <div id="header" data-role="header">
@@ -20,7 +30,7 @@
     <br>
     <br>
     Please turn on location services to get started.</p>
-      <button onclick="Location()">Get Location</button>
+      <button onclick="getLocation()">Get Location</button>
   </div>
 
   <div data-role="footer" data-position="fixed">
