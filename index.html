@@ -2,16 +2,25 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="script.js"></script>
+<!--<script src="script.js"></script>-->
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body bgcolor="yellow">
-    <script>
-        function getLocation() {
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-        }
-    </script>
+<script>
+var x = document.getElementById("demo");
 
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";}
+    }
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 <div data-role="page" id="pageone">
   <div id="header" data-role="header">
     <img src="logo.png">
