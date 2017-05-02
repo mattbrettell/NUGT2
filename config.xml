@@ -24,5 +24,5 @@
 
 <platform name="ios" >
 </platform>
-    <plugin name="org.apache.cordova.geolocation" source="pgb" />
+    <plugin name="cordova plugin add cordova-plugin-geolocation" source="pgb" />
 </widget>
