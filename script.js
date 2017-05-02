@@ -1,3 +1,4 @@
 function getLocation() {
-    navigator.geolocation.getCurrentPosition;
+    //navigator.geolocation.getCurrentPosition;
+    alert("hello");
 }
