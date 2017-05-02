@@ -7,31 +7,20 @@
 </head>
 <body bgcolor="yellow">
 <script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";}
-    }
-    
-function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+   function showMap(position) {
+    navigator.geolocation.getCurrentPosition(showMap);}
+    </script>
 <div data-role="page" id="pageone">
   <div id="header" data-role="header">
     <img src="logo.png">
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Welcome to NUGT2! A tour guide and encyclopedia in your pocket! 
+    <p>Welcome to NUGT23 A tour guide and encyclopedia in your pocket! 
     <br>
     <br>
     Please turn on location services to get started.</p>
-      <button onclick="getLocation()">Get Location</button>
+      <button onclick="showMap()">Get Location</button>
   </div>
 
   <div data-role="footer" data-position="fixed">
