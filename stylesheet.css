@@ -1,11 +1,11 @@
-#header {
-    text-align:center;
+#logo {
+    margin-left:5%;
 }
 
 p { 
 text-align:center;
     font-size:1em;
-    color:navy;
+    color:black;
     font-family:Helvetica;
     background-color:white;
     padding:7.5%;
@@ -16,14 +16,14 @@ text-align:center;
 h3 { 
 text-align:center;
     font-size:1em;
-    color:navy;
+    color:black;
     font-family:Helvetica;
 }
 
 h4 { 
 text-align:center;
     font-size:1em;
-    color:navy;
+    color:black;
     font-family:Helvetica;
 }
 
