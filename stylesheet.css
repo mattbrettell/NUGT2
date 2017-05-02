@@ -49,3 +49,20 @@ img {
 #backbutton {
     margin-left:1%;
 }
+
+#socialicon { 
+    width:100%;
+}
+
+form {
+    width:100%;
+    margin-left:5%;
+}
+
+label { 
+text-align:center;
+    font-size:1em;
+    color:black;
+    font-family:Helvetica;
+    border-radius: 25px;
+}
