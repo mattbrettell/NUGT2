@@ -14,3 +14,9 @@ function pageone() {
     document.getElementById("contact").style.display = "none";
     document.getElementById("pageone").style.display = "block";
 }
+
+function cathedral() {
+      document.getElementById("pagethree").style.display = "block";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("pageone").style.display = "none";
+}

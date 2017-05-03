@@ -4,7 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
+    
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Worcester Cathedral</title>
+  </head>
 <body background="background.jpg">
     <!--PAGE ONE-->
 <div data-role="page" id="pageone">
@@ -36,7 +40,7 @@ function showPosition(position) {
 </script>
       <br>
       <div id="pictures"><p>If you already know where you want to go, press the image below for directions!</p>
-      <img src="cathedral.jpg" width="75%"><br>
+          <a href="Cathedral.html"><img src="cathedral.jpg" width="75%"></a><br>
       <h3>Worcester Cathedral</h3>
           <br>
           <img src="commandery.jpg" width="75%"><br>
@@ -82,15 +86,55 @@ function showPosition(position) {
     <!--END OF CONTACT PAGE-->
     <!--PAGE THREE-->  
     <div data-role="page" id="pagethree">
-  <div data-role="header">
-    <h1>Welcome To page three</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
-    <p>This is Page Three. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
-  </div>
+        <div>
+    <div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
     </div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: 37.77, lng: -122.447}
+        });
+        directionsDisplay.setMap(map);
+
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+        document.getElementById('mode').addEventListener('change', function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var selectedMode = document.getElementById('mode').value;
+        directionsService.route({
+          origin: {lat: 52.1937, lng: -2.2260},  // Hive.
+          destination: {lat: 52.1887, lng: -2.2207},  //  Cathedral.
+          // Note that Javascript allows us to access the constant
+          // using square brackets and a string value as its
+          // "property."
+          travelMode: google.maps.TravelMode[selectedMode]
+        }, function(response, status) {
+          if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIUbc_N_BLDaMzwDSVf-xxt6Vv_KpewJA&callback=initMap">
+    </script>
+        </div>
     <!--END OF PAGE THREE-->
 </body>
 </html>
