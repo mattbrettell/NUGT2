@@ -12,7 +12,7 @@
         Discover interesting landmarks and their histories.
     </description>
 
-    <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
+    <author>
        Matt Brettell
     </author>
 
@@ -25,4 +25,5 @@
 
 <platform name="ios" >
 </platform>
+    <icon src="nugtlogo.png"></icon>
 </widget>
