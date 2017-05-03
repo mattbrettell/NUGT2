@@ -3,35 +3,14 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Travel modes in directions</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
+      <script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+    <title>Worcester Cathedral Directions</title>
   </head>
-  <body>
+  <body background="cathedral.jpg">
+      <a href="index.html"><img id="backbutton" src="backbutton.png" width="40%"></a>
+      <p>Directions to Worcester Cathedral</p>
     <div id="floating-panel">
     <b>Mode of Travel: </b>
     <select id="mode">
@@ -41,7 +20,7 @@
       <option value="TRANSIT">Transit</option>
     </select>
     </div>
-    <div id="map"></div>
+          <div id="map"></div>
     <script>
       function initMap() {
         var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -61,8 +40,8 @@
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var selectedMode = document.getElementById('mode').value;
         directionsService.route({
-          origin: {lat: 52.1937, lng: -2.2260},  // Haight.
-          destination: {lat: 52.1887, lng: -2.2207},  // Ocean Beach.
+          origin: {lat: 52.1956, lng: -2.2440},  // Current.
+          destination: {lat: 52.1887, lng: -2.2207},  // Cathedral Beach.
           // Note that Javascript allows us to access the constant
           // using square brackets and a string value as its
           // "property."
