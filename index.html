@@ -18,6 +18,22 @@
     <br>
     Please turn on location services to get started.</p>
       <button class="button" onclick="getLocation()">Get Location</button>
+      <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
       <br>
       <div id="pictures"><p>If you already know where you want to go, press the image below for directions!</p>
       <img src="cathedral.jpg" width="75%"><br>

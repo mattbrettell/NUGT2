@@ -20,7 +20,7 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="cordova-plugin-geolocation" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
 
 
 <platform name="ios" >
