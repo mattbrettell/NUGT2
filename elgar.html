@@ -6,11 +6,11 @@
       <script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
-    <title>Commandery Directions</title>
+    <title>Worcester Cathedral Directions</title>
   </head>
-  <body background="commandery.jpg">
+  <body background="elgar.jpg">
       <a href="index.html"><img id="backbutton" src="backbutton.png" width="40%"></a>
-      <p>Directions to the Commandery</p>
+      <p>Directions to the statue of Edward Elgar</p>
     <div id="floating-panel">
     <b>Mode of Travel: </b>
     <select id="mode">
@@ -41,7 +41,7 @@
         var selectedMode = document.getElementById('mode').value;
         directionsService.route({
           origin: {lat: 52.1956, lng: -2.2440},  // Current.
-          destination: {lat: 52.1876, lng: -2.2171},  // Commandery Beach.
+          destination: {lat: 52.1898, lng: -2.2203},  // Elgar Beach.
           // Note that Javascript allows us to access the constant
           // using square brackets and a string value as its
           // "property."
