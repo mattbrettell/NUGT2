@@ -66,3 +66,8 @@ text-align:center;
     font-family:Helvetica;
     border-radius: 25px;
 }
+
+#map {
+    width:0%;
+    margin-left:5%;
+}
